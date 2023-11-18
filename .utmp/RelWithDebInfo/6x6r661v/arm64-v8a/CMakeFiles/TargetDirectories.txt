@@ -1,0 +1,5 @@
+D:/Dev/GameDev/Projects/Abduction Conundrum/Abduction Conundrum/.utmp/RelWithDebInfo/6x6r661v/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/Dev/GameDev/Projects/Abduction Conundrum/Abduction Conundrum/.utmp/RelWithDebInfo/6x6r661v/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/Dev/GameDev/Projects/Abduction Conundrum/Abduction Conundrum/.utmp/RelWithDebInfo/6x6r661v/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/Dev/GameDev/Projects/Abduction Conundrum/Abduction Conundrum/.utmp/RelWithDebInfo/6x6r661v/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/Dev/GameDev/Projects/Abduction Conundrum/Abduction Conundrum/.utmp/RelWithDebInfo/6x6r661v/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

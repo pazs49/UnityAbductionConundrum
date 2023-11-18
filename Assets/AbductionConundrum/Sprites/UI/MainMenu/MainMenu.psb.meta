@@ -1,0 +1,433 @@
+fileFormatVersion: 2
+guid: 7cf0d94ba906205439a968451dfcfb16
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 429669027f04e2a4da9f5389ba06c201
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: robot1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1690
+      y: 1092
+      width: 266
+      height: 443
+    spriteID: b4b263b345879624db7feef5942d8f36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1690, y: 1092}
+    spritePosition: {x: 20, y: 53}
+  - name: player
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1315
+      y: 1092
+      width: 367
+      height: 574
+    spriteID: 7be154793f5c5cb41ad13a1603095277
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1315, y: 1092}
+    spritePosition: {x: 489, y: 0}
+  - name: 'Abduction '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1315
+      y: 1674
+      width: 485
+      height: 317
+    spriteID: 7c96c489752505142aecde8db66a4b19
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1315, y: 1674}
+    spritePosition: {x: 213, y: 556}
+  - name: ttileBG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 659
+      y: 1092
+      width: 648
+      height: 631
+    spriteID: af8f77836e2891c41b74116e69e71671
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 659, y: 1092}
+    spritePosition: {x: 135, y: 382}
+  - name: button1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 659
+      y: 1731
+      width: 467
+      height: 148
+    spriteID: ab12c7e7f6b98e5459ce67a6b3f1a6d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 659, y: 1731}
+    spritePosition: {x: 1215, y: 734}
+  - name: button2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 52, y: 51, z: 46, w: 53}
+    rect:
+      serializedVersion: 2
+      x: 1808
+      y: 1674
+      width: 185
+      height: 185
+    spriteID: a4924c792aa3f2b42a50314032a26361
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1808, y: 1674}
+    spritePosition: {x: 1212, y: 541}
+  - name: UIPanel
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 94, y: 100, z: 80, w: 93}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 647
+      height: 897
+    spriteID: ad9a445e4b73efd4b81d9332003fd616
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1092}
+    spritePosition: {x: 1118, y: 97}
+  - name: BG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1920
+      height: 1080
+    spriteID: 478d86ad3b75d3d4ca8863cf7675761a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Graphic
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 53eaf325b6cdcbf428361798ce3be305
+    layerID: 39
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: robot1
+    spriteName: robot1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: b4b263b345879624db7feef5942d8f36
+    layerID: 17
+    mosaicPosition: {x: 1690, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: player
+    spriteName: player
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7be154793f5c5cb41ad13a1603095277
+    layerID: 42
+    mosaicPosition: {x: 1315, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: UI
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 663b1de4b4d0fa04ca98224937a14329
+    layerID: 37
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: title
+    spriteName: 
+    isGroup: 1
+    parentIndex: 3
+    spriteID: c97fcf21374e49043b3260667daea888
+    layerID: 56
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: 'Abduction '
+    spriteName: 'Abduction '
+    isGroup: 0
+    parentIndex: 4
+    spriteID: 7c96c489752505142aecde8db66a4b19
+    layerID: 58
+    mosaicPosition: {x: 1315, y: 1674}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ttileBG
+    spriteName: ttileBG
+    isGroup: 0
+    parentIndex: 4
+    spriteID: af8f77836e2891c41b74116e69e71671
+    layerID: 69
+    mosaicPosition: {x: 659, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: button1
+    spriteName: button1
+    isGroup: 0
+    parentIndex: 3
+    spriteID: ab12c7e7f6b98e5459ce67a6b3f1a6d8
+    layerID: 22
+    mosaicPosition: {x: 659, y: 1731}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: button2
+    spriteName: button2
+    isGroup: 0
+    parentIndex: 3
+    spriteID: a4924c792aa3f2b42a50314032a26361
+    layerID: 52
+    mosaicPosition: {x: 1808, y: 1674}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: UIPanel
+    spriteName: 
+    isGroup: 1
+    parentIndex: 3
+    spriteID: de4cf3540e0538d40a12b9c6a40ef530
+    layerID: 35
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: UIPanel
+    spriteName: UIPanel
+    isGroup: 0
+    parentIndex: 9
+    spriteID: ad9a445e4b73efd4b81d9332003fd616
+    layerID: 34
+    mosaicPosition: {x: 4, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BG
+    spriteName: BG
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 478d86ad3b75d3d4ca8863cf7675761a
+    layerID: 49
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

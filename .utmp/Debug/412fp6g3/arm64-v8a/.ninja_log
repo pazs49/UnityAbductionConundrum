@@ -1,0 +1,5 @@
+# ninja log v5
+4	128	7207981758071839	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c1855178ba681c78
+128	281	7207981759128562	D:/Dev/GameDev/Projects/Abduction Conundrum/Abduction Conundrum/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/412fp6g3/obj/arm64-v8a/libswappywrapper.so	cb0e150acf9e5e18
+5	164	7215969630918486	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c1855178ba681c78
+165	456	7215969632403370	D:/Dev/GameDev/Projects/Abduction Conundrum/Abduction Conundrum/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/412fp6g3/obj/arm64-v8a/libswappywrapper.so	cb0e150acf9e5e18
