@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,6 +6,8 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
   public GameObject gameOverCanvas;
+
+  public GameObject[] stars;
 
   public Color disabledImageColor;
   public Color disabledTextColor;
@@ -15,7 +18,17 @@ public class GameOver : MonoBehaviour
   {
     Result();
 
+    StartCoroutine(DisplayStars(CurrentPlayerData.instance.levels[GameManager.instance.currentLevelNumber - 1]));
     DisableUnneededButtons();
+  }
+
+  IEnumerator DisplayStars(int rank)
+  {
+    for (int i = 0; i <= rank - 1; i++)
+    {
+      stars[i].SetActive(true);
+      yield return new WaitForSeconds(.3f);
+    }
   }
 
   void DisablePlayerColAndTouchControls()
