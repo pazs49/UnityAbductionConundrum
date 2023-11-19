@@ -1,15 +1,21 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
   public GameObject gameOverCanvas;
 
+  public Color disabledImageColor;
+  public Color disabledTextColor;
+  public GameObject NextLevelButton;
+  public GameObject SkipButton;
+
   private void Start()
   {
     Result();
 
-    DisablePlayerColAndTouchControls();
-    GetFunctionsForMyButtons();
+    DisableUnneededButtons();
   }
 
   void DisablePlayerColAndTouchControls()
@@ -25,18 +31,84 @@ public class GameOver : MonoBehaviour
     }
   }
 
+  public void Retry()
+  {
+    LevelManager.instance.Retry();
+  }
+
+  public void NextLevel()
+  {
+    LevelManager.instance.NextLevel();
+  }
+
+  public void Skip()
+  {
+    LevelManager.instance.Skip();
+  }
+
   void Result()
   {
     LevelManager.instance.Result();
   }
 
-  void DisplayStarRank()
+  public void MainMenu()
   {
-    print("you got " + LevelManager.instance.GetStarRank());
+    LevelManager.instance.MainMenu();
   }
 
-  void GetFunctionsForMyButtons()
+  public void DisableButton(GameObject button, Color disabledImageColor, Color disabledTextColor)
   {
-    LevelManager.instance.NextLevel();
+    button.GetComponent<Image>().color = disabledImageColor;
+    button.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = disabledTextColor;
+    button.GetComponent<Button>().interactable = false;
+  }
+
+  void DisableUnneededButtons()
+  {
+    DisablePlayerColAndTouchControls();
+
+    //Level not complete
+    //For non-latest level
+    if (
+      //Check for null
+      CurrentPlayerData.instance.levels.Count >= GameManager.instance.currentLevelNumber + 1
+      && !LevelManager.instance.isLevelCompleted
+      //Check for current level
+      && CurrentPlayerData.instance.levels[GameManager.instance.currentLevelNumber - 1] >= 1
+      //Check for next level
+      && CurrentPlayerData.instance.levels[GameManager.instance.currentLevelNumber] >= 1
+      )
+    {
+      print("Level not complete but can move to the next level because current and next level is unlocked");
+      DisableButton(SkipButton, disabledImageColor, disabledTextColor);
+
+      if ((CurrentPlayerData.instance.levels.Count - GameManager.instance.currentLevelNumber) == 1
+        && (GameManager.instance.currentLevelNumber - GameManager.instance.levels.Count) == 0)
+      {
+        DisableButton(NextLevelButton, disabledImageColor, disabledTextColor);
+      }
+    }
+    //Level Complete
+    //Last level therefore no next level
+    else
+    {
+      DisableButton(SkipButton, disabledImageColor, disabledTextColor);
+      if ((CurrentPlayerData.instance.levels.Count - GameManager.instance.currentLevelNumber) == 1
+        && (GameManager.instance.currentLevelNumber - GameManager.instance.levels.Count) == 0)
+      {
+        DisableButton(NextLevelButton, disabledImageColor, disabledTextColor);
+      }
+      else
+      {
+
+      }
+    }
+
+    //Also not level complete. Disable next level button because next level not unlocked
+    if (CurrentPlayerData.instance.levels.Count == GameManager.instance.currentLevelNumber
+      && !LevelManager.instance.isLevelCompleted)
+    {
+      DisableButton(NextLevelButton, disabledImageColor, disabledTextColor);
+    }
   }
 }

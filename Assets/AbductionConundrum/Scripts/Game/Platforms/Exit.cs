@@ -6,8 +6,7 @@ public class Exit : MonoBehaviour
   {
     if (collision.CompareTag("Player"))
     {
-      LevelManager.instance.isLevelCompleted = true;
-      LevelManager.instance.GameOver();
+      LevelManager.instance.GameOver(false);
     }
   }
 }

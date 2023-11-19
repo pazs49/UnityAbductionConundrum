@@ -5,6 +5,9 @@ public class OutOfBounds : MonoBehaviour
   GameObject player;
   GameObject yLimit;
 
+  //For firing once
+  bool isFired;
+
   private void Start()
   {
     player = GameObject.Find("Player");
@@ -18,11 +21,12 @@ public class OutOfBounds : MonoBehaviour
 
   void Check()
   {
-    if (player != null)
+    if (player != null && !isFired)
     {
       if (player.transform.position.y <= yLimit.transform.position.y)
       {
-        player.GetComponent<PlayerMovement>().Death();
+        LevelManager.instance.GameOver(true);
+        isFired = true;
       }
     }
   }

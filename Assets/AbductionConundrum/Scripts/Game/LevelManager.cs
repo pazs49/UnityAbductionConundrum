@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
@@ -56,10 +55,21 @@ public class LevelManager : MonoBehaviour
     return 1;
   }
 
+  public void Skip()
+  {
+    print("Level skipped and watched an unskippable ad!");
+  }
+
   public void Retry()
   {
     string currentSceneName = SceneManager.GetActiveScene().name;
     GameManager.instance.ChangeScene(currentSceneName);
+  }
+
+  public void MainMenu()
+  {
+    GameManager.instance.ChangeState("mainMenu");
+    GameManager.instance.ChangeScene("MainMenu");
   }
 
   //Gets star rank and saves 
@@ -105,12 +115,11 @@ public class LevelManager : MonoBehaviour
     }
     else
     {
-      print("Better luck next time");
+      //Dead but next level is already completed so we can go next level
     }
   }
 
-  //Callback for NextLevelButton
-  public void OnNextLevel()
+  public void NextLevel()
   {
     int currentLevelInt = GameManager.instance.currentLevelNumber;
     int nextLevelInt = currentLevelInt += 1;
@@ -121,31 +130,25 @@ public class LevelManager : MonoBehaviour
     GameManager.instance.ChangeScene(nextLevel);
   }
 
-  public void NextLevel()
+  public void GameOver(bool isPlayerDead)
   {
-    GameObject gameOverCanvas = GameObject.FindGameObjectWithTag("GameOverCanvas");
-    int childCountGameOverCanvas = gameOverCanvas.transform.childCount;
-
-    for (int i = 0; i < childCountGameOverCanvas; i++)
+    GameObject player = GameObject.FindGameObjectWithTag("Player");
+    //Level Incomplete because player is dead
+    if (isPlayerDead)
     {
-      if (gameOverCanvas.transform.GetChild(i).name == "NextLevelButton")
-      {
-        GameObject go = gameOverCanvas.transform.GetChild(i).gameObject;
-        EventTrigger eventTrigger = go.GetComponent<EventTrigger>();
-        EventTrigger.Entry entry = new EventTrigger.Entry();
-        entry.eventID = EventTriggerType.PointerClick;
-
-        entry.callback.AddListener((eventData) => OnNextLevel());
-        eventTrigger.triggers.Add(entry);
-
-        return;
-      }
+      print("Game over pDead");
+      player.GetComponent<PlayerMovement>().Death();
+      isLevelCompleted = false;
+      Instantiate(gameOverCanvas);
     }
-  }
+    //Level Complete because player is alive
+    else
+    {
+      print("Game over pAlive");
+      isLevelCompleted = true;
+      Instantiate(gameOverCanvas);
+    }
 
-  public void GameOver()
-  {
-    Instantiate(gameOverCanvas);
   }
 
 }

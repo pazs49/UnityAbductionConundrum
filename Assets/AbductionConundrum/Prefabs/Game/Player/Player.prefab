@@ -322,7 +322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3215834395870797909}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.9422184, w: 0.3349994}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9422187, w: 0.33499855}
   m_LocalPosition: {x: 0.14870746, y: 0.14047787, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
@@ -612,7 +612,7 @@ Transform:
   m_GameObject: {fileID: 4747150774381227020}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.017, y: 0.039, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1044,7 +1044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6174925572901899287}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.081460215, w: 0.9966767}
+  m_LocalRotation: {x: -0, y: -0, z: 0.081459306, w: 0.9966767}
   m_LocalPosition: {x: 0.348, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1817,7 +1817,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  groundCheckRadius: 0.05
+  groundCheckRadius: 0.02
   isGrounded: 0
 --- !u!114 &8795945636035816227
 MonoBehaviour:

@@ -63,7 +63,8 @@ public class PlayerMovement : MonoBehaviour
   public void Movement()
   {
     //Run
-    rb2d.velocity = new Vector2(direction * speed, rb2d.velocity.y);
+    if (rb2d.bodyType != RigidbodyType2D.Static)
+      rb2d.velocity = new Vector2(direction * speed, rb2d.velocity.y);
 
     //Jump
     if (pJump.isGrounded)
