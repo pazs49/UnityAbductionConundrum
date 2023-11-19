@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.IO;
-using TMPro;
 using UnityEngine;
 
 public class SaveLoad : MonoBehaviour
@@ -52,17 +51,5 @@ public class SaveLoad : MonoBehaviour
 
     print("Save file loaded!");
     return playerData;
-  }
-
-  //Remove on final build
-  public void SaveTest()
-  {
-    CurrentPlayerData.instance.gold += 100;
-
-    Save();
-    GameObject.Find("SaveButton(FOR TESTING)").transform.GetChild(0)
-      .transform.GetComponent<TextMeshProUGUI>().text = CurrentPlayerData.instance.gold.ToString();
-    print("SaveTest Successful!");
-
   }
 }
