@@ -74,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
     else
     {
       anim.JumpAnim(true);
-      anim.RunAnim(false);
     }
   }
 
