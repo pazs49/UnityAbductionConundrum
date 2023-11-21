@@ -130,13 +130,16 @@ public class LevelManager : MonoBehaviour
     GameManager.instance.ChangeScene(nextLevel);
   }
 
+  /// <summary>
+  /// true for if player died
+  /// </summary>
+  /// <param name="isPlayerDead"></param>
   public void GameOver(bool isPlayerDead)
   {
     GameObject player = GameObject.FindGameObjectWithTag("Player");
     //Level Incomplete because player is dead
     if (isPlayerDead)
     {
-      print("Game over pDead");
       player.GetComponent<PlayerMovement>().Death();
       isLevelCompleted = false;
       Instantiate(gameOverCanvas);
@@ -144,7 +147,6 @@ public class LevelManager : MonoBehaviour
     //Level Complete because player is alive
     else
     {
-      print("Game over pAlive");
       isLevelCompleted = true;
       Instantiate(gameOverCanvas);
     }

@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - LevelManager
   - GameOverCanvas
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Bouncer
   - Projectile
   - Switch
-  - 
+  - Enemy
   - 
   - 
   - 

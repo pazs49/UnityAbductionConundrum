@@ -128,8 +128,13 @@ public class PlayerMovement : MonoBehaviour
     Movement();
   }
 
-  private void OnCollisionEnter2D(Collision2D collision)
+  //Death collisions
+  private void OnTriggerEnter2D(Collider2D collision)
   {
-
+    if ((collision.gameObject.transform.parent.GetComponent<Projectile>()
+      && collision.gameObject.transform.parent.GetComponent<Projectile>().source == "enemy"))
+    {
+      LevelManager.instance.GameOver(true);
+    }
   }
 }

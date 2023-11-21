@@ -26,6 +26,7 @@ public class OutOfBounds : MonoBehaviour
       if (player.transform.position.y <= yLimit.transform.position.y)
       {
         LevelManager.instance.GameOver(true);
+
         isFired = true;
       }
     }
