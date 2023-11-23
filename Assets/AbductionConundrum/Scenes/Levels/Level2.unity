@@ -3603,7 +3603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2656809431673009505, guid: 33b90476f648b824b93212f375a66879, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.081458606
+      value: 0.081458755
       objectReference: {fileID: 0}
     - target: {fileID: 2822445416242398024, guid: 33b90476f648b824b93212f375a66879, type: 3}
       propertyPath: jumpForce
@@ -3663,11 +3663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8367296729816285522, guid: 33b90476f648b824b93212f375a66879, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.3349979
+      value: 0.334998
       objectReference: {fileID: 0}
     - target: {fileID: 8367296729816285522, guid: 33b90476f648b824b93212f375a66879, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.94221896
+      value: 0.9422189
       objectReference: {fileID: 0}
     - target: {fileID: 9031842296288528262, guid: 33b90476f648b824b93212f375a66879, type: 3}
       propertyPath: m_Name
