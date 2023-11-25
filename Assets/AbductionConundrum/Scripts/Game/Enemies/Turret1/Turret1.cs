@@ -6,6 +6,8 @@ public class Turret1 : MonoBehaviour, IEnemy
   public State currentState { get; set; }
 
   [field: SerializeField]
+  public bool IsActive { get; set; }
+  [field: SerializeField]
   public GameObject DeathEffect { get; set; }
   [field: SerializeField]
   public float Health { get; set; }
@@ -23,9 +25,11 @@ public class Turret1 : MonoBehaviour, IEnemy
 
   float timer;
 
+
   private void OnTriggerEnter2D(Collider2D collision)
   {
-    if (collision.transform.parent.GetComponent<Projectile>()
+    //Hit by player's projectile
+    if (collision.transform.parent && collision.transform.parent.GetComponent<Projectile>()
       && collision.transform.parent.GetComponent<Projectile>().source == "player")
     {
       State(global::State.Dead);
@@ -51,13 +55,19 @@ public class Turret1 : MonoBehaviour, IEnemy
     }
     else if (currentState == global::State.Attacking)
     {
-      timer += Time.deltaTime;
-      while (AttackInterval <= timer)
+      if (IsActive)
       {
-        State(currentState);
-        timer = 0;
+        timer += Time.deltaTime;
+        while (AttackInterval <= timer)
+        {
+          State(currentState);
+          timer = 0;
+        }
       }
-
+      else if (!IsActive)
+      {
+        State(global::State.Idle);
+      }
     }
     else if (currentState == global::State.Dead)
     {

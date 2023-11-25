@@ -33,8 +33,6 @@ public class SaveLoad : MonoBehaviour
 
     string json = JsonUtility.ToJson(playerData);
     File.WriteAllText(savePath, json);
-
-    print("Game saved!");
   }
 
   public PlayerData Load()
@@ -49,7 +47,6 @@ public class SaveLoad : MonoBehaviour
       playerData = new PlayerData(new List<int>(), 0);
     }
 
-    print("Save file loaded!");
     return playerData;
   }
 }

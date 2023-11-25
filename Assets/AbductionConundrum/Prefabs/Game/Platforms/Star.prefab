@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7649301547576120115}
   - component: {fileID: 3627297355783283403}
   - component: {fileID: 5073069286986476823}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 7066278888092735739}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710677, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: -0.006, y: -0.09, z: -0.007}
+  m_LocalPosition: {x: -0.006, y: -0.09, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1487,7 +1487,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: -2550857894587526547, guid: 0796e465dd9554e4c8e21851f5855db6, type: 3}
+    - sprite: {fileID: -5392893853437214675, guid: 243061ad39838594ba689356994131db, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4842,7 +4842,7 @@ GameObject:
   - component: {fileID: 6069220374137778493}
   - component: {fileID: 6714580396681479617}
   - component: {fileID: 2711718951054621140}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}

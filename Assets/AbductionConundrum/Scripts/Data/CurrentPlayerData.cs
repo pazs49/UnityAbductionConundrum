@@ -24,6 +24,11 @@ public class CurrentPlayerData : MonoBehaviour
   {
     PlayerData playerData = SaveLoad.instance.Load();
 
+    if (playerData.levels.Count == 0)
+    {
+      playerData.levels.Add(1);
+    }
+
     levels = playerData.levels;
     gold = playerData.gold;
   }

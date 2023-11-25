@@ -142,15 +142,20 @@ public class LevelManager : MonoBehaviour
     {
       player.GetComponent<PlayerMovement>().Death();
       isLevelCompleted = false;
-      Instantiate(gameOverCanvas);
+
+      Invoke("InstantiateGameOverCanvasViaInvoke", .5f);
     }
     //Level Complete because player is alive
     else
     {
       isLevelCompleted = true;
-      Instantiate(gameOverCanvas);
+      Invoke("InstantiateGameOverCanvasViaInvoke", .5f);
     }
 
+  }
+  void InstantiateGameOverCanvasViaInvoke()
+  {
+    Instantiate(gameOverCanvas);
   }
 
 }

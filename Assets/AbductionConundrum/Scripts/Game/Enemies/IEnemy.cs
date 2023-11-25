@@ -3,6 +3,7 @@ using UnityEngine;
 public interface IEnemy
 {
   GameObject DeathEffect { get; set; }
+  bool IsActive { get; set; }
   float Health { get; set; }
   float AttackPower { get; set; }
   float AttackInterval { get; set; }

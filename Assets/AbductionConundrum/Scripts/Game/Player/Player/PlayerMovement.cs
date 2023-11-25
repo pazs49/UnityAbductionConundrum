@@ -135,7 +135,6 @@ public class PlayerMovement : MonoBehaviour
     pDeath = GetComponent<PlayerDeath>();
   }
 
-
   private void Update()
   {
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR

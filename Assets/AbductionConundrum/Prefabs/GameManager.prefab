@@ -50,6 +50,8 @@ MonoBehaviour:
   levelManager: {fileID: 2469676570763326680, guid: 83efb184e78257a45b6d6154be86aeb8, type: 3}
   levels: []
   currentLevelName: 
+  currentLevelNumber: 0
+  isKeyboardEnabled: 0
 --- !u!114 &1452213610519470736
 MonoBehaviour:
   m_ObjectHideFlags: 0
