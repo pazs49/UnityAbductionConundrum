@@ -122,8 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b48e62014852547abe54194850435c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Press Left and Right for movement. Jump and shoot for, you guess it! Jumping
-    and shooting!
+  message: 'Be careful! An enemy on top of you. You can destroy it by shooting it.
+    Also, the strength of your projectile and bouncers vary each level! Here''s a
+    tip: shooting two or more projectiles at once can create some nifty trick shot!'
   dialogueCanvas: {fileID: 7408139061300971432}
 --- !u!212 &3052267246234686773
 SpriteRenderer:
@@ -165,7 +166,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 1484502161, guid: a562b61f7c1ba2148a0c7bf2814d4a8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -211,7 +212,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0062954873, y: -0.17627364}
+  m_Offset: {x: -0.29769087, y: -0.17627364}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -221,7 +222,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.9286512, y: 0.6474527}
+  m_Size: {x: 0.32067847, y: 0.6474527}
   m_EdgeRadius: 0
 --- !u!1 &3762656180161826697
 GameObject:
@@ -553,7 +554,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &5876256322765441869
 MonoBehaviour:

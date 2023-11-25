@@ -47,6 +47,7 @@ public class GameOver : MonoBehaviour
     }
   }
 
+
   public void Retry()
   {
     LevelManager.instance.Retry();

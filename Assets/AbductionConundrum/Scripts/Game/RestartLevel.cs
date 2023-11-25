@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class RestartLevel : MonoBehaviour
 {
+  bool isRestartPressed;
   public void Restart()
   {
-    LevelManager.instance.GameOver(true);
+    if (!isRestartPressed)
+    {
+      LevelManager.instance.GameOver(true);
+      isRestartPressed = true;
+    }
   }
 }
