@@ -51,7 +51,8 @@ MonoBehaviour:
   levels: []
   currentLevelName: 
   currentLevelNumber: 0
-  isKeyboardEnabled: 0
+  isKeyboardEnabled: 1
+  transitionCanvas: {fileID: 779585461411375617, guid: dc510d064f42599459665ffba985fccf, type: 3}
 --- !u!114 &1452213610519470736
 MonoBehaviour:
   m_ObjectHideFlags: 0

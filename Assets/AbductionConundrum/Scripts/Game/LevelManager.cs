@@ -62,11 +62,22 @@ public class LevelManager : MonoBehaviour
 
   public void Retry()
   {
+    GameManager.instance.Transition("fadein");
+    Invoke("RetryWrapperWithDelay", .5f);
+  }
+  void RetryWrapperWithDelay()
+  {
     string currentSceneName = SceneManager.GetActiveScene().name;
     GameManager.instance.ChangeScene(currentSceneName);
   }
 
+
   public void MainMenu()
+  {
+    GameManager.instance.Transition("fadein");
+    Invoke("MainMenuWrapperWithDelay", .5f);
+  }
+  void MainMenuWrapperWithDelay()
   {
     GameManager.instance.ChangeState("mainMenu");
     GameManager.instance.ChangeScene("MainMenu");
@@ -120,6 +131,11 @@ public class LevelManager : MonoBehaviour
   }
 
   public void NextLevel()
+  {
+    GameManager.instance.Transition("fadein");
+    Invoke("NextLevelWrapperWithDelay", .5f);
+  }
+  void NextLevelWrapperWithDelay()
   {
     int currentLevelInt = GameManager.instance.currentLevelNumber;
     int nextLevelInt = currentLevelInt += 1;

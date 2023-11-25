@@ -20,7 +20,6 @@ public class Bouncer : MonoBehaviour
   {
     if (collision.gameObject.tag == "Projectile")
     {
-      print("Stronger!");
       Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
       rb.AddForce(rb.velocity * forceAmount, ForceMode2D.Force);
     }

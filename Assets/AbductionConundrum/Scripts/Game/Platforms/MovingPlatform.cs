@@ -32,7 +32,6 @@ public class MovingPlatform : MonoBehaviour, IActivatable
   {
     if (collision.gameObject.CompareTag("Player"))
     {
-      print("Player detected!");
       collision.gameObject.transform.parent = this.transform;
     }
   }
@@ -41,7 +40,6 @@ public class MovingPlatform : MonoBehaviour, IActivatable
   {
     if (collision.gameObject.CompareTag("Player"))
     {
-      print("Player exiting!");
       collision.gameObject.transform.parent = null;
     }
   }

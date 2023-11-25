@@ -6,19 +6,23 @@ using Scene = UnityEngine.SceneManagement.Scene;
 
 public class GameManager : MonoBehaviour
 {
-  //mainMenu, game
-  [SerializeField]
-  string currentState;
-
   public GameObject levelManager;
 
   public static GameManager instance;
+
+  //mainMenu, game
+  [SerializeField]
+  string currentState;
 
   public List<Level> levels;
   public string currentLevelName;
   public int currentLevelNumber;
 
   public bool isKeyboardEnabled;
+
+  //Fading in and fading out when level starts
+  public GameObject transitionCanvas;
+  public List<string> scenesLoaded;
 
   private void OnEnable()
   {
@@ -65,10 +69,18 @@ public class GameManager : MonoBehaviour
 
   public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
   {
+    scenesLoaded.Add(SceneManager.GetActiveScene().name);
+
     if (currentState == "game")
     {
       Instantiate(levelManager);
       GetCurrentLevelData();
+
+      Transition("fadeout");
+    }
+    else if (currentState == "mainMenu")
+    {
+      Transition("fadeout");
     }
   }
 
@@ -88,5 +100,46 @@ public class GameManager : MonoBehaviour
   public void NewLevel(string levelName)
   {
 
+  }
+
+  /// <summary>
+  /// fadein, fadeout, complete
+  /// </summary>
+  /// <param name="fadeType"></param>
+  public void Transition(string fadeType)
+  {
+    GameObject go = Instantiate(GameManager.instance.transitionCanvas);
+
+    if (fadeType == "fadein")
+    {
+      go.GetComponent<Transition>().fadeType = "fadein";
+    }
+    else if (fadeType == "fadeout")
+    {
+      go.GetComponent<Transition>().fadeType = "fadeout";
+    }
+    else if (fadeType == "complete")
+    {
+      go.GetComponent<Transition>().fadeType = "complete";
+    }
+  }
+
+  public string GetPreviousSceneName()
+  {
+    if (scenesLoaded.Count >= 2)
+    {
+      return scenesLoaded[scenesLoaded.Count - 1];
+    }
+    else
+    {
+      return "MainMenu";
+    }
+  }
+
+  public bool IsLastSceneALevel()
+  {
+    bool isLastSceneALevel = Regex.IsMatch(GetPreviousSceneName(), @"\bLevel\b");
+
+    return isLastSceneALevel;
   }
 }

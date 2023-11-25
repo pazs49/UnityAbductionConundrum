@@ -12,6 +12,13 @@ public class AddLoadLevelToLevelButtons : MonoBehaviour
 
   void LoadLevel()
   {
+    GameManager.instance.Transition("fadein");
+    Invoke("LoadLevelWithDelay", .5f);
+  }
+
+  //Give way to transition animation
+  void LoadLevelWithDelay()
+  {
     GameManager.instance.ChangeState("game");
     GameManager.instance.currentLevelName = levelName;
     GameManager.instance.ChangeScene(levelName);
