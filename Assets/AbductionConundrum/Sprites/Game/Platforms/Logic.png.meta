@@ -175,7 +175,7 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 9
-      pivot: {x: 0.50659513, y: 0.058128357}
+      pivot: {x: 0.5055511, y: 0.05777359}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,11 +251,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Logic_11
+      name: Logic_6
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 0
+        x: 1536
+        y: 2304
         width: 256
         height: 256
       alignment: 0
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21585b43261971949bdd83fa2f7ccf8d
-      internalID: -457675665
+      spriteID: 39c32da87b59429449ed928a2f82cc92
+      internalID: 1484502161
       vertices: []
       indices: 
       edges: []
@@ -286,6 +286,9 @@ TextureImporter:
       Logic_1: -4122134849674065439
       Logic_10: 1976270811
       Logic_11: -457675665
+      Logic_12: -1017884239
+      Logic_13: 1361668112
+      Logic_14: 757025191
       Logic_2: 2924559460469151176
       Logic_3: -7632872631166253831
       Logic_4: -7603552999611775510

@@ -36,6 +36,9 @@ public class GameOver : MonoBehaviour
     GameObject player = GameObject.Find("Player");
     player.GetComponent<BoxCollider2D>().enabled = false;
     player.GetComponent<Rigidbody2D>().gravityScale = 0;
+    player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+    GameManager.instance.isKeyboardEnabled = false;
 
     if (GameObject.Find("TouchControlCanvas"))
     {

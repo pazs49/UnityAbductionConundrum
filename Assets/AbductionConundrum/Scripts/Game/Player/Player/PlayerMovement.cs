@@ -19,6 +19,11 @@ public class PlayerMovement : MonoBehaviour
   [SerializeField]
   int direction;
 
+  //isLeftt and isRightt is a gate to keep the code from firing every frame
+  //The code is for nudging the position whenever the player change position.
+  //It's to prevent player from moving up ledges accidentally when changing direction
+  bool isLeftt;
+  bool isRightt;
   public void Run(bool isLeft)
   {
     anim.RunAnim(true);
@@ -26,10 +31,24 @@ public class PlayerMovement : MonoBehaviour
     if (direction == -1)
     {
       transform.localScale = new Vector3(-1, 1, 1);
+
+      isRightt = true;
+      if (isLeftt)
+      {
+        transform.position -= new Vector3(.05f, 0, 0);
+      }
+      isLeftt = false;
     }
     else if (direction == 1)
     {
       transform.localScale = new Vector3(1, 1, 1);
+
+      isLeftt = true;
+      if (isRightt)
+      {
+        transform.position += new Vector3(.05f, 0, 0);
+      }
+      isRightt = false;
     }
   }
 
@@ -131,8 +150,9 @@ public class PlayerMovement : MonoBehaviour
   //Death collisions
   private void OnTriggerEnter2D(Collider2D collision)
   {
-    if ((collision.gameObject.transform.parent.GetComponent<Projectile>()
-      && collision.gameObject.transform.parent.GetComponent<Projectile>().source == "enemy"))
+    //Checking if player is hit by a collider
+    if (collision.transform.parent != null && collision.gameObject.transform.parent.GetComponent<Projectile>() != null
+      && collision.gameObject.transform.parent.GetComponent<Projectile>().source == "enemy")
     {
       LevelManager.instance.GameOver(true);
     }

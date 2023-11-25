@@ -4,7 +4,8 @@ public class StarCollectible : MonoBehaviour
 {
   private void OnTriggerEnter2D(Collider2D collision)
   {
-    if (collision.CompareTag("Player") || collision.CompareTag("Projectile"))
+    if (collision.gameObject.CompareTag("Player") || (collision.CompareTag("Projectile")
+      && collision.GetComponent<Projectile>().source == "player"))
     {
       LevelManager.instance.starsCollected += 1;
 

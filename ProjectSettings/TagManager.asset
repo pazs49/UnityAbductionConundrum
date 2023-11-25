@@ -10,6 +10,8 @@ TagManager:
   - LevelManager
   - GameOverCanvas
   - Enemy
+  - Bouncer
+  - Breakables
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - Projectile
   - Switch
   - Enemy
-  - 
+  - Breakables
   - 
   - 
   - 
