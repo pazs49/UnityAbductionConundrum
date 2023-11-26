@@ -17,6 +17,7 @@ public class PlayerAttack : MonoBehaviour
   {
     if (bullet != null)
     {
+      AudioManager.instance.PlaySFX("pAttack");
       anim.ShootAnim();
       Vector3 position = transform.position + (transform.localScale.x == -1 ? new Vector3(0f, 0.4f, 0) : new Vector3(0f, 0.4f, 0));
       GameObject mBullet = Instantiate(bullet, position, Quaternion.identity);

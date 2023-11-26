@@ -39,6 +39,7 @@ public class Projectile : MonoBehaviour
 
   void BreakTile(Tilemap tilemap, Collision2D collision)
   {
+    AudioManager.instance.PlaySFX("brickDestroy" + Random.Range(1, 5));
     Vector3 hitPosition = Vector3.zero;
     foreach (ContactPoint2D hit in collision.contacts)
     {

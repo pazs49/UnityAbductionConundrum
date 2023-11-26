@@ -25,17 +25,8 @@ public class AppearDisappear : MonoBehaviour, IActivatable
       Collider2D[] platformColliders = platforms[i].GetComponentsInChildren<Collider2D>(true);
       colliders[i] = platformColliders;
     }
-  }
 
-  public void Switch()
-  {
-    Effect();
-  }
-
-  void Effect()
-  {
-    isActive = !isActive;
-
+    //Default
     if (isActive)
     {
       EnableDisableColliders(false);
@@ -43,7 +34,9 @@ public class AppearDisappear : MonoBehaviour, IActivatable
       {
         foreach (SpriteRenderer sr in sprites[i])
         {
-          StartCoroutine(FadeSpriteToZeroAlpha(sr));
+          Color currentColor = sr.color;
+          currentColor.a = 0f;
+          sr.color = currentColor;
         }
       }
 
@@ -55,10 +48,46 @@ public class AppearDisappear : MonoBehaviour, IActivatable
       {
         foreach (SpriteRenderer sr in sprites[i])
         {
-          StartCoroutine(FadeSpriteToFullAlpha(sr));
+          Color currentColor = sr.color;
+          currentColor.a = 1f;
+          sr.color = currentColor;
         }
       }
     }
+  }
+
+  public void Switch()
+  {
+    Effect();
+  }
+
+  void Effect()
+  {
+    if (isActive)
+    {
+      EnableDisableColliders(true);
+      for (int i = 0; i < sprites.Length; i++)
+      {
+        foreach (SpriteRenderer sr in sprites[i])
+        {
+          StartCoroutine(FadeSpriteToFullAlpha(sr));
+        }
+      }
+
+    }
+    else if (!isActive)
+    {
+      EnableDisableColliders(false);
+      for (int i = 0; i < sprites.Length; i++)
+      {
+        foreach (SpriteRenderer sr in sprites[i])
+        {
+          StartCoroutine(FadeSpriteToZeroAlpha(sr));
+        }
+      }
+    }
+
+    isActive = !isActive;
   }
 
 

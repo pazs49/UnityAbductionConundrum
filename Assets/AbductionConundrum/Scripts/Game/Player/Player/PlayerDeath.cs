@@ -14,6 +14,7 @@ public class PlayerDeath : MonoBehaviour
 
   public void Death()
   {
+    AudioManager.instance.PlaySFX("pDeath");
     isPlayerDead = true;
     Instantiate(deathParticle, transform.position, Quaternion.identity);
 

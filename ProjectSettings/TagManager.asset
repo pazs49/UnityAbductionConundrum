@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Bouncer
   - Breakables
+  - Powerup
   layers:
   - Default
   - TransparentFX

@@ -18,6 +18,8 @@ public class Switch : MonoBehaviour
 
   public void Effect()
   {
+    AudioManager.instance.PlaySFX("activate");
+
     if (!isActivated)
     {
       handle.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, -45));

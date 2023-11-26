@@ -11,8 +11,7 @@ public class GameManager : MonoBehaviour
   public static GameManager instance;
 
   //mainMenu, game
-  [SerializeField]
-  string currentState;
+  public string currentState;
 
   public List<Level> levels;
   public string currentLevelName;
@@ -73,6 +72,7 @@ public class GameManager : MonoBehaviour
 
     if (currentState == "game")
     {
+      AudioManager.instance.PlayMusic("Game2");
       Instantiate(levelManager);
       GetCurrentLevelData();
 
@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
     }
     else if (currentState == "mainMenu")
     {
+      AudioManager.instance.PlayMusic("MainMenu");
       Transition("fadeout");
     }
   }

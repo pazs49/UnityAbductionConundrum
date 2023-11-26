@@ -24,7 +24,12 @@ public class PlayerJump : MonoBehaviour
   public void Jump()
   {
     if (isGrounded)
+    {
+      //Audio plays 2x sometimes on keyboard but that's fine we're on android lol
+      AudioManager.instance.PlaySFX("pJump");
       rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+    }
+
   }
 
 }

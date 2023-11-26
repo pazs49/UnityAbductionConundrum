@@ -639,7 +639,7 @@ MonoBehaviour:
   <DeathEffect>k__BackingField: {fileID: 8046061881823793358, guid: cd470bcd83241814c98d6a088e4a0355, type: 3}
   <Health>k__BackingField: 0
   <AttackInterval>k__BackingField: 2
-  <AttackPower>k__BackingField: 15
+  <AttackPower>k__BackingField: 5
   projectile: {fileID: 5664769565240799035, guid: 5f9344db928a45e4ba6812d0f24c63c7, type: 3}
   spawnPoint: {fileID: 9172200684886793477}
 --- !u!61 &5708202802344512795

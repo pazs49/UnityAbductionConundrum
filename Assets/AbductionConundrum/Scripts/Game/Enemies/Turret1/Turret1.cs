@@ -100,6 +100,8 @@ public class Turret1 : MonoBehaviour, IEnemy
 
   public void Attack()
   {
+    AudioManager.instance.PlaySFX("eAttack");
+
     int direction = transform.localScale.x == 1 ? 1 : -1;
     GameObject mProjectile = Instantiate(projectile, spawnPoint.transform.position, Quaternion.identity);
     mProjectile.GetComponent<Rigidbody2D>().AddForce((transform.right * direction) * AttackPower, ForceMode2D.Impulse);
@@ -114,6 +116,8 @@ public class Turret1 : MonoBehaviour, IEnemy
 
   public void Death()
   {
+    AudioManager.instance.PlaySFX("eDeath");
+
     Instantiate(DeathEffect, new Vector3(transform.position.x, transform.position.y, 10), Quaternion.identity);
     Destroy(gameObject);
   }

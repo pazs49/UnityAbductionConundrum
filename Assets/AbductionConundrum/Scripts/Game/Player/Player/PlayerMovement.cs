@@ -125,6 +125,12 @@ public class PlayerMovement : MonoBehaviour
     }
   }
 
+  //SFX
+  public void PlaySFX(string name)
+  {
+    AudioManager.instance.PlaySFX(name);
+  }
+
   private void Awake()
   {
     anim = GetComponent<PlayerAnimation>();

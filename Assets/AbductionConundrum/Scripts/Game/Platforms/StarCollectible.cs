@@ -8,6 +8,8 @@ public class StarCollectible : MonoBehaviour
     if (LevelManager.instance != null && (collision.gameObject.CompareTag("Player") || ((collision.CompareTag("Projectile")
       && collision.GetComponent<Projectile>().source == "player"))))
     {
+      AudioManager.instance.PlaySFX("starCollected");
+
       LevelManager.instance.starsCollected += 1;
 
       Destroy(gameObject);

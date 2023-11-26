@@ -20,6 +20,7 @@ public class Bouncer : MonoBehaviour
   {
     if (collision.gameObject.tag == "Projectile")
     {
+      AudioManager.instance.PlaySFX("crash" + Random.Range(1, 8).ToString());
       Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
       rb.AddForce(rb.velocity * forceAmount, ForceMode2D.Force);
     }
