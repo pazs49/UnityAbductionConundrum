@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
@@ -6,6 +7,8 @@ public class PlayerDeath : MonoBehaviour
 
   public bool isPlayerDead;
   public GameObject deathParticle;
+
+  public Collider2D[] pColliders;
 
   private void Awake()
   {
@@ -25,5 +28,7 @@ public class PlayerDeath : MonoBehaviour
     if (transform.GetChild(0).name == "player")
       transform.GetChild(0).gameObject.SetActive(false);
     isPlayerDead = true;
+
+    Array.ForEach(pColliders, x => x.enabled = false);
   }
 }

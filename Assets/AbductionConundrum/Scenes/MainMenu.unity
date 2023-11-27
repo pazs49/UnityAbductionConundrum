@@ -968,13 +968,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bc5f17f8af7dbf246aee6d52f7369825, type: 2}
   - {fileID: 11400000, guid: 6acb2480a5c835c4c9fcef50cac29dbc, type: 2}
   - {fileID: 11400000, guid: a458a480db8aecf44be28ac6d40930e0, type: 2}
-  - {fileID: 11400000, guid: 5928b91485cf53c4bb3c5b0c1edf7ca7, type: 2}
-  - {fileID: 11400000, guid: 7bfd37c5c0663c74cbcb65624217eadb, type: 2}
-  - {fileID: 11400000, guid: 6bf30b15bfe0d0b4693d203ccf90e694, type: 2}
-  - {fileID: 11400000, guid: f659a66a4e041ea43adf32d83ee6322c, type: 2}
-  - {fileID: 11400000, guid: 246edccbcfb7b1345acfbcf9ae2353fb, type: 2}
-  - {fileID: 11400000, guid: d4d59c4c7e891c243bf2b3b1dccc5133, type: 2}
-  - {fileID: 11400000, guid: d14d308ff2924c548a305a45604f0096, type: 2}
+  - {fileID: 11400000, guid: 6b7dc4c15518eee4dbef8676927e0863, type: 2}
+  - {fileID: 11400000, guid: 89872e55e6b5dc2448512389ab1ac047, type: 2}
   level: {fileID: 6097887976623397039, guid: 16af92c3ae4d8754eb5ca03c9e525ce9, type: 3}
 --- !u!1 &1334636127
 GameObject:

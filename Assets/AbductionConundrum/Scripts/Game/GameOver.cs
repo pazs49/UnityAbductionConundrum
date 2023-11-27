@@ -84,48 +84,37 @@ public class GameOver : MonoBehaviour
   {
     DisablePlayerColAndTouchControls();
 
-    //Level not complete
-    //For non-latest level
-    if (
-      //Check for null
-      CurrentPlayerData.instance.levels.Count >= GameManager.instance.currentLevelNumber + 1
-      && !LevelManager.instance.isLevelCompleted
-      //Check for current level
-      && CurrentPlayerData.instance.levels[GameManager.instance.currentLevelNumber - 1] >= 1
-      //Check for next level
-      && CurrentPlayerData.instance.levels[GameManager.instance.currentLevelNumber] >= 1
-      )
+    print(CurrentPlayerData.instance.levels.Count);
+    print(GameManager.instance.currentLevelNumber);
+
+    if (LevelManager.instance.isLevelCompleted)
     {
-      print("Level not complete but can move to the next level because current and next level is unlocked");
       DisableButton(SkipButton, disabledImageColor, disabledTextColor);
 
-      if ((CurrentPlayerData.instance.levels.Count - GameManager.instance.currentLevelNumber) == 1
-        && (GameManager.instance.currentLevelNumber - GameManager.instance.levels.Count) == 0)
+      //For Last Level disable nextbutton
+      if ((LevelManager.instance.currentLevel.level) >= GameManager.instance.levels.Count)
       {
         DisableButton(NextLevelButton, disabledImageColor, disabledTextColor);
       }
+
     }
-    //Level Complete
-    //Last level therefore no next level
     else
     {
-      DisableButton(SkipButton, disabledImageColor, disabledTextColor);
-      if ((CurrentPlayerData.instance.levels.Count - GameManager.instance.currentLevelNumber) == 1
-        && (GameManager.instance.currentLevelNumber - GameManager.instance.levels.Count) == 0)
+      //Disable skip when you die but already completed that level
+      if (CurrentPlayerData.instance.levels.Count >= GameManager.instance.currentLevelNumber + 1)
+      {
+        DisableButton(SkipButton, disabledImageColor, disabledTextColor);
+      }
+      //Disable next when you die but 
+      else
       {
         DisableButton(NextLevelButton, disabledImageColor, disabledTextColor);
       }
-      else
+
+      if ((LevelManager.instance.currentLevel.level) >= GameManager.instance.levels.Count)
       {
-
+        DisableButton(SkipButton, disabledImageColor, disabledTextColor);
       }
-    }
-
-    //Also not level complete. Disable next level button because next level not unlocked
-    if (CurrentPlayerData.instance.levels.Count == GameManager.instance.currentLevelNumber
-      && !LevelManager.instance.isLevelCompleted)
-    {
-      DisableButton(NextLevelButton, disabledImageColor, disabledTextColor);
     }
   }
 }

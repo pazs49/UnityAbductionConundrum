@@ -3,12 +3,11 @@ using UnityEngine;
 public class PlayerJump : MonoBehaviour
 {
   public float jumpForce;
-  public Transform groundCheck;
-  public LayerMask groundLayer;
-  public float groundCheckRadius;
   public bool isGrounded;
 
   private Rigidbody2D rb;
+
+  public PlayerGroundChecker pGroundChecker;
 
 
   private void Start()
@@ -18,8 +17,10 @@ public class PlayerJump : MonoBehaviour
 
   private void FixedUpdate()
   {
-    isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    isGrounded = pGroundChecker.isGrounded;
   }
+
+
 
   public void Jump()
   {
